@@ -137,7 +137,7 @@ class GetItemTest(unittest.TestCase):
             pdf["wrong"]
 
     def test_read_corrupt_page(self):
-        with self.assertRaises((pdftotext.Error, IndexError)):
+        with self.assertRaises(pdftotext.Error):
             pdf = pdftotext.PDF(get_file("corrupt_page.pdf"))
             pdf[0]
 
